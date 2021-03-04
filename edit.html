@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{employee.id}}" method="POST">
+          <div class="form-group">
+            <p>Parcel Number/ID</p>
+            <input type="text" name="parcel" value="{{employee.parcel}}" class="form-control" placeholder="Parcel Number/ID">
+          </div>
+          <div class="form-group">
+            <p>Roll Year</p>
+            <input type="text" name="roll" value="{{employee.roll}}" class="form-control" placeholder="Roll Year">
+          </div>
+          <div class="form-group">
+            <p>Petition Number</p>
+            <input type="text" name="petition" value="{{employee.petition}}" class="form-control" placeholder="Petition Number">
+          </div>
+          <div class="form-group">
+            <p>Improvement Data</p>
+            <input type="text" name="pacs" value="{{employee.pacs}}" class="form-control" placeholder="Improvement Data">
+          </div>
+          <div class="form-group">
+            <p>Zoning</p>
+            <input type="text" name="zoning" value="{{employee.zoning}}" class="form-control" placeholder="Zoning">
+          </div>
+          <div class="form-group">
+            <p>Tangible Personal Property</p>
+            <input type="text" name="tang" value="{{employee.tang}}" class="form-control" placeholder="Tangible Personal Property">
+          </div>
+          <div class="form-group">
+            <p>Cost Approach</p>
+            <input type="text" name="cost" value="{{employee.cost}}" class="form-control" placeholder="Cost Approach">
+          </div>
+          <div class="form-group">
+            <p>Sales Approach</p>
+            <input type="text" name="sale" value="{{employee.sale}}" class="form-control" placeholder="Sales Approach">
+          </div>
+          <div class="form-group">
+            <p>Income Approach</p>
+            <input type="text" name="income" value="{{employee.income}}" class="form-control" placeholder="Income Approach">
+          </div>
+          <div class="form-group">
+            <p>Occupancy</p>
+            <input type="text" name="occupancy" value="{{employee.occupancy}}" class="form-control" placeholder="Occupancy">
+          </div>
+          <div class="form-group">
+            <p>Building Class</p>
+            <input type="text" name="build" value="{{employee.build}}" class="form-control" placeholder="Building Class">
+          </div>
+          <div class="form-group">
+            <p>Quality</p>
+            <input type="text" name="quality" value="{{employee.quality}}" class="form-control" placeholder="Quality">
+          </div>
+          <div class="form-group">
+            <p>Age</p>
+            <input type="text" name="age" value="{{employee.age}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Condition</p>
+            <input type="text" name="condition" value="{{employee.condition}}" class="form-control" placeholder="Condition">
+          </div>
+          <div class="form-group">
+            <p>Price per SqFt</p>
+            <input type="text" name="priceSquare" value="{{employee.priceSquare}}" class="form-control" placeholder="Price per SqFt">
+          </div>
+          <div class="form-group">
+            <p>Building Improvements</p>
+            <input type="text" name="buildImpr" value="{{employee.buildImpr}}" class="form-control" placeholder="Building Improvements">
+          </div>
+          <div class="form-group">
+            <p>Misc. Extra Feature Value</p>
+            <input type="text" name="extraFeature" value="{{employee.extraFeature}}" class="form-control" placeholder="Misc. Extra Feature Value">
+          </div>
+          <div class="form-group">
+            <p>Estimated Land Value</p>
+            <input type="text" name="estLandVal" value="{{employee.estLandVal}}" class="form-control" placeholder="Estimated Land Value">
+          </div>
+          <div class="form-group">
+            <p>Total Cost Approach</p>
+            <input type="text" name="totalCostAppr" value="{{employee.totalCostAppr}}" class="form-control" placeholder="Total Cost Approach">
+          </div>
+          <div class="form-group">
+            <p>Property Appraiser Market Value</p>
+            <input type="text" name="propApprMarketVal" value="{{employee.propApprMarketVal}}" class="form-control" placeholder="Property Appraiser Market Value">
+          </div>
+          <div class="form-group">
+            <p>Potential Gross Income</p>
+            <input type="text" name="potentialGrossIncome" value="{{employee.potentialGrossIncome}}" class="form-control" placeholder="Potential Gross Income">
+          </div>
+          <div class="form-group">
+            <p>Less Vacancies and Collections</p>
+            <input type="text" name="lessVacanciesAndCollections" value="{{employee.lessVacanciesAndCollections}}" class="form-control" placeholder="Less Vacancies and Collections">
+          </div>
+          <div class="form-group">
+            <p>Effective Gross Income</p>
+            <input type="text" name="effectiveGrossIncome" value="{{employee.effectiveGrossIncome}}" class="form-control" placeholder="Effective Gross Income">
+          </div>
+          <div class="form-group">
+            <p>Less Operating Expenses</p>
+            <input type="text" name="lessOperatingExpenses" value="{{employee.lessOperatingExpenses}}" class="form-control" placeholder="Less Operating Expenses">
+          </div>
+          <div class="form-group">
+            <p>Net Operating Income</p>
+            <input type="text" name="netOperatingIncome" value="{{employee.netOperatingIncome}}" class="form-control" placeholder="Net Operating Income">
+          </div>
+          <div class="form-group">
+            <p>Cap Rate</p>
+            <input type="text" name="capRate" value="{{employee.capRate}}" class="form-control" placeholder="Cap Rate">
+          </div>
+          <div class="form-group">
+            <p>Plus Effective Tax Rate</p>
+            <input type="text" name="plusEffectiveTaxRate" value="{{employee.plusEffectiveTaxRate}}" class="form-control" placeholder="Plus Effective Tax Rate">
+          </div>
+          <div class="form-group">
+            <p>Overall Rate</p>
+            <input type="text" name="overallRate" value="{{employee.overallRate}}" class="form-control" placeholder="Overall Rate">
+          </div>
+          <div class="form-group">
+            <p>Estimated Market Value</p>
+            <input type="text" name="estimatedMarketVal" value="{{employee.estimatedMarketVal}}" class="form-control" placeholder="Estimated Market Value">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 1 Parcel #</p>
+            <input type="text" name="age" value="{{employee.cost_comp1_parcel}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 1 Sale Price</p>
+            <input type="text" name="age" value="{{employee.cost_comp1_sale_price}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 1 Size</p>
+            <input type="text" name="age" value="{{employee.cost_comp1_size}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 1 Price per sq ft</p>
+            <input type="text" name="age" value="{{employee.cost_comp1_price_per_square}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 2 Parcel #</p>
+            <input type="text" name="age" value="{{employee.cost_comp2_parcel}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 2 Sale Price</p>
+            <input type="text" name="age" value="{{employee.cost_comp2_sale_price}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 2 Size</p>
+            <input type="text" name="age" value="{{employee.cost_comp2_size}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 2 Price per sq ft</p>
+            <input type="text" name="age" value="{{employee.cost_comp2_price_per_square}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 3 Parcel #</p>
+            <input type="text" name="age" value="{{employee.cost_comp3_parcel}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 3 Sale Price</p>
+            <input type="text" name="age" value="{{employee.cost_comp3_sale_price}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 3 Size</p>
+            <input type="text" name="age" value="{{employee.cost_comp3_size}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <p>Comparable Sale 3 Price per sq ft</p>
+            <input type="text" name="age" value="{{employee.cost_comp3_price_per_square}}" class="form-control" placeholder="Age">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
