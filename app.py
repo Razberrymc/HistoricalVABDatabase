@@ -72,7 +72,34 @@ def add_employee():
         cost_comp3_sale_price = request.form['cost_comp3_sale_price']
         cost_comp3_size = request.form['cost_comp3_size']
         cost_comp3_price_per_square = request.form['cost_comp3_price_per_square']
-        cur.execute("INSERT INTO employee (parcel, roll, petition, pacs, zoning, tang, cost, sale, income, occupancy, build, quality, age, `condition`, priceSquare, buildImpr, extraFeature, estLandVal, totalCostAppr, propApprMarketVal, potentialGrossIncome, lessVacanciesAndCollections, effectiveGrossIncome, lessOperatingExpenses, netOperatingIncome, capRate, plusEffectiveTaxRate, overallRate, estimatedMarketVal, cost_comp1_parcel, cost_comp1_sale_price, cost_comp1_size, cost_comp1_price_per_square, cost_comp2_parcel, cost_comp2_sale_price, cost_comp2_size, cost_comp2_price_per_square, cost_comp3_parcel, cost_comp3_sale_price, cost_comp3_size, cost_comp3_price_per_square) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (parcel, roll, petition, pacs, zoning, tang, cost, sale, income, occupancy, build, quality, age, condition, priceSquare, buildImpr, extraFeature, estLandVal, totalCostAppr, propApprMarketVal, potentialGrossIncome, lessVacanciesAndCollections, effectiveGrossIncome, lessOperatingExpenses, netOperatingIncome, capRate, plusEffectiveTaxRate, overallRate, estimatedMarketVal, cost_comp1_parcel, cost_comp1_sale_price, cost_comp1_size, cost_comp1_price_per_square, cost_comp2_parcel, cost_comp2_sale_price, cost_comp2_size, cost_comp2_price_per_square, cost_comp3_parcel, cost_comp3_sale_price, cost_comp3_size, cost_comp3_price_per_square))
+        BB_JV = request.form['BB_JV']
+        BB_AV = request.form['BB_AV']
+        BB_EV = request.form['BB_EV']
+        BB_TV = request.form['BB_TV']
+        PACS_Zoning = request.form['PACS_Zoning']
+        PUSE = request.form['PUSE']
+        Just_Value = request.form['Just_Value']
+        Assessed_Value = request.form['Assessed_Value']
+        Exemption_Value = request.form['Exemption_Value']
+        Taxable_Value = request.form['Taxable_Value']
+        PACS_Quality = request.form['PACS_Quality']
+        PACS_Age = request.form['PACS_Age']
+        Appraisal_Method = request.form['Appraisal_Method']
+        Living_Area = request.form['Living_Area']
+        Legal_Acreage = request.form['Legal_Acreage']
+        Imprv_Val = request.form['Imprv_Val']
+        Misc_Val = request.form['Misc_Val']
+        Land_Val = request.form['Land_Val']
+        Owner_Mail_Name = request.form['Owner_Mail_Name']
+        Owner_Mail_Addr1 = request.form['Owner_Mail_Addr1']
+        Owner_Mail_Addr2 = request.form['Owner_Mail_Addr2']
+        Owner_Mail_Addr3 = request.form['Owner_Mail_Addr3']
+        Owner_Mail_City = request.form['Owner_Mail_City']
+        Owner_Mail_State = request.form['Owner_Mail_State']
+        Owner_Mail_Zip = request.form['Owner_Mail_Zip']
+        Owner_Mail_Country = request.form['Owner_Mail_Country']
+        Cover_Name = request.form['Cover_Name']
+        cur.execute("INSERT INTO employee (parcel, roll, petition, pacs, zoning, tang, cost, sale, income, occupancy, build, quality, age, `condition`, priceSquare, buildImpr, extraFeature, estLandVal, totalCostAppr, propApprMarketVal, potentialGrossIncome, lessVacanciesAndCollections, effectiveGrossIncome, lessOperatingExpenses, netOperatingIncome, capRate, plusEffectiveTaxRate, overallRate, estimatedMarketVal, cost_comp1_parcel, cost_comp1_sale_price, cost_comp1_size, cost_comp1_price_per_square, cost_comp2_parcel, cost_comp2_sale_price, cost_comp2_size, cost_comp2_price_per_square, cost_comp3_parcel, cost_comp3_sale_price, cost_comp3_size, cost_comp3_price_per_square, BB_JV, BB_AV, BB_EV, BB_TV, PACS_Zoning, PUSE, Just_Value, Assessed_Value, Exemption_Value, Taxable_Value, PACS_Quality, PACS_Age, Appraisal_Method, Living_Area, Legal_Acreage, Imprv_Val, Misc_Val, Land_Val, Owner_Mail_Name, Owner_Mail_Name, Owner_Mail_Addr1, Owner_Mail_Adrr2, Owner_Mail_Addr3, Owner_Mail_City, Owner_Mail_State, Owner_Mail_Zip, Owner_Mail_Country, Cover_Name) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (parcel, roll, petition, pacs, zoning, tang, cost, sale, income, occupancy, build, quality, age, condition, priceSquare, buildImpr, extraFeature, estLandVal, totalCostAppr, propApprMarketVal, potentialGrossIncome, lessVacanciesAndCollections, effectiveGrossIncome, lessOperatingExpenses, netOperatingIncome, capRate, plusEffectiveTaxRate, overallRate, estimatedMarketVal, cost_comp1_parcel, cost_comp1_sale_price, cost_comp1_size, cost_comp1_price_per_square, cost_comp2_parcel, cost_comp2_sale_price, cost_comp2_size, cost_comp2_price_per_square, cost_comp3_parcel, cost_comp3_sale_price, cost_comp3_size, cost_comp3_price_per_square, BB_JV, BB_AV, BB_EV, BB_TV, PACS_Zoning, PUSE, Just_Value, Assessed_Value, Exemption_Value, Taxable_Value, PACS_Quality, PACS_Age, Appraisal_Method, Living_Area, Legal_Acreage, Imprv_Val, Misc_Val, Land_Val, Owner_Mail_Name, Owner_Mail_Addr1, Owner_Mail_Addr2, Owner_Mail_Addr3, Owner_Mail_City, Owner_Mail_State, Owner_Mail_Zip, Owner_Mail_Country, Cover_Name))
         conn.commit()
         flash('Entry Added Successfully')
         return redirect(url_for('Index'))
@@ -132,6 +159,33 @@ def update_employee(id):
         cost_comp3_sale_price = request.form['cost_comp3_sale_price']
         cost_comp3_size = request.form['cost_comp3_size']
         cost_comp3_price_per_square = request.form['cost_comp3_price_per_square']
+        BB_JV = request.form['BB_JV']
+        BB_AV = request.form['BB_AV']
+        BB_EV = request.form['BB_EV']
+        BB_TV = request.form['BB_TV']
+        PACS_Zoning = request.form['PACS_Zoning']
+        PUSE = request.form['PUSE']
+        Just_Value = request.form['Just_Value']
+        Assessed_Value = request.form['Assessed_Value']
+        Exemption_Value = request.form['Exemption_Value']
+        Taxable_Value = request.form['Taxable_Value']
+        PACS_Quality = request.form['PACS_Quality']
+        PACS_Age = request.form['PACS_Age']
+        Appraisal_Method = request.form['Appraisal_Method']
+        Living_Area = request.form['Living_Area']
+        Legal_Acreage = request.form['Legal_Acreage']
+        Imprv_Val = request.form['Imprv_Val']
+        Misc_Val = request.form['Misc_Val']
+        Land_Val = request.form['Land_Val']
+        Owner_Mail_Name = request.form['Owner_Mail_Name']
+        Owner_Mail_Addr1 = request.form['Owner_Mail_Addr1']
+        Owner_Mail_Addr2 = request.form['Owner_Mail_Addr2']
+        Owner_Mail_Addr3 = request.form['Owner_Mail_Addr3']
+        Owner_Mail_City = request.form['Owner_Mail_City']
+        Owner_Mail_State = request.form['Owner_Mail_State']
+        Owner_Mail_Zip = request.form['Owner_Mail_Zip']
+        Owner_Mail_Country = request.form['Owner_Mail_Country']
+        Cover_Name = request.form['Cover_Name']
         conn = mysql.connect()
         cur = conn.cursor(pymysql.cursors.DictCursor)
         cur.execute("""
@@ -176,9 +230,35 @@ def update_employee(id):
                 cost_comp3_parcel = %s,
                 cost_comp3_sale_price = %s,
                 cost_comp3_size = %s,
-                cost_comp3_price_per_square = %s
+                cost_comp3_price_per_square = %s,
+                BB_JV = %s,
+                BB_AV = %s,
+                BB_EV = %s,
+                BB_TV = %s,
+                PACS_Zoning = %s,
+                PUSE = %s,
+                Just_Value = %s,
+                Assesed_Value = %s,
+                Exemption_Value = %s,
+                Taxable_Value = %s,
+                PACS_Age = %s,
+                Appraisal_Method = %s,
+                Living_Area = %s,
+                Legal_Acreage = %s,
+                Imprv_Val = %s,
+                Misc_Val = %s,
+                Land_Val = %s,
+                Owner_Mail_Name = %s,
+                Owner_Mail_Addr1 = %s,
+                Owner_Mail_Addr2 = %s,
+                Owner_Mail_Addr3 = %s,
+                Owner_Mail_City = %s,
+                Owner_Mail_State = %s,
+                Owner_Mail_Zip = %s,
+                Owner_Mail_Country = %s,
+                Cover_Name = %s
             WHERE id = %s
-        """, (parcel, roll, petition, pacs, zoning, tang, cost, sale, income, occupancy, build, quality, age, condition, priceSquare, buildImpr, extraFeature, estLandVal, totalCostAppr, propApprMarketVal, potentialGrossIncome, lessVacanciesAndCollections, effectiveGrossIncome, lessOperatingExpenses, netOperatingIncome, capRate, plusEffectiveTaxRate, overallRate, estimatedMarketVal, cost_comp1_parcel, cost_comp1_sale_price, cost_comp1_size, cost_comp1_price_per_square, cost_comp2_parcel, cost_comp2_sale_price, cost_comp2_size, cost_comp2_price_per_square, cost_comp3_parcel, cost_comp3_sale_price, cost_comp3_size, cost_comp3_price_per_square, id))
+        """, (parcel, roll, petition, pacs, zoning, tang, cost, sale, income, occupancy, build, quality, age, condition, priceSquare, buildImpr, extraFeature, estLandVal, totalCostAppr, propApprMarketVal, potentialGrossIncome, lessVacanciesAndCollections, effectiveGrossIncome, lessOperatingExpenses, netOperatingIncome, capRate, plusEffectiveTaxRate, overallRate, estimatedMarketVal, cost_comp1_parcel, cost_comp1_sale_price, cost_comp1_size, cost_comp1_price_per_square, cost_comp2_parcel, cost_comp2_sale_price, cost_comp2_size, cost_comp2_price_per_square, cost_comp3_parcel, cost_comp3_sale_price, cost_comp3_size, cost_comp3_price_per_square, BB_JV, BB_AV, BB_EV, BB_TV, PACS_Zoning, PUSE, Just_Value, Assessed_Value, Exemption_Value, Taxable_Value, PACS_Quality, PACS_Age, Appraisal_Method, Living_Area, Legal_Acreage, Imprv_Val, Misc_Val, Land_Val, Owner_Mail_Name, Owner_Mail_Addr1, Owner_Mail_Addr2, Owner_Mail_Addr3, Owner_Mail_City, Owner_Mail_State, Owner_Mail_Zip, Owner_Mail_Country, Cover_Name, id))
         flash('Entry Updated Successfully')
         conn.commit()
         return redirect(url_for('Index'))

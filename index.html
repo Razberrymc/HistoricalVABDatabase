@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
- <div class="row"><h3>Add Entry</h3></div>
+ <h4 style="padding-left:15px;padding-top:20px;">Add Entry</h4>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3" style="padding-top:10px;">
       {% with messages = get_flashed_messages()  %}
       {% if messages %}
       {% for message in messages %}
@@ -19,18 +19,19 @@
       {% endwith %}
       <div class="card card-body">
 
-          <div style="padding:0px 10px 5px 0px;">
-            <button class="btn btn-info" onclick="window.toggleColumn()">
+          <div style="padding:0px 10px 0px 0px;">
+            <button id="PACS" class="btn btn-info" onclick="window.toggleColumn()" style="margin-top:5px;">
                 Parcel Attributes
             </button>
-            <button id="VAB" class="btn btn-info" onclick="window.toggleColumn()">
+            <button id="VAB" class="btn btn-info" onclick="window.toggleColumn()" style="margin-top:5px;">
                 VAB Attributes
             </button>
           </div>
           <div style="padding:0px 10px 15px 0px;">
-            <button id="COST" class="btn btn-info" onclick="window.toggleColumn()">Cost</button>
-            <button id="SALE" class="btn btn-info" onclick="window.toggleColumn()">Sales</button>
-            <button id="INCOME" class="btn btn-info" onclick="window.toggleColumn()">Income</button>
+            <button id="COST" class="btn btn-info" onclick="window.toggleColumn()" style="margin-top:5px;">Cost</button>
+            <button id="SALE" class="btn btn-info" onclick="window.toggleColumn()" style="margin-top:5px;">Sales</button>
+            <button id="INCOME" class="btn btn-info" onclick="window.toggleColumn()" style="margin-top:5px;">Income</button>
+            <button id="MAT" class="btn btn-info" onclick="window.toggleColumn()" style="margin-top:5px;">MAT</button>
           </div>
 
 
@@ -123,48 +124,129 @@
             <input type="text" class="form-control" name="estimatedMarketVal" placeholder="Estimated Market Value">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp1_parcel" placeholder="Comparable Sale 1 Parcel #">
+            <input type="text" class="form-control" name="cost_comp1_parcel" placeholder="Cost Comparable 1 Parcel #">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp1_sale_price" placeholder="Comparable Sale 1 Sale Price">
+            <input type="text" class="form-control" name="cost_comp1_sale_price" placeholder="Cost Comparable 1 Sale Price">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp1_size" placeholder="Comparable Sale 1 Size">
+            <input type="text" class="form-control" name="cost_comp1_size" placeholder="Cost Comparable 1 Size">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp1_price_per_square" placeholder="Comparable Sale 1 Price per sq ft">
+            <input type="text" class="form-control" name="cost_comp1_price_per_square" placeholder="Cost Comparable 1 Price per sq ft">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp2_parcel" placeholder="Comparable Sale 2 Parcel #">
+            <input type="text" class="form-control" name="cost_comp2_parcel" placeholder="Cost Comparable 2 Parcel #">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp2_sale_price" placeholder="Comparable Sale 2 Sale Price">
+            <input type="text" class="form-control" name="cost_comp2_sale_price" placeholder="Cost Comparable 2 Sale Price">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp2_size" placeholder="Comparable Sale 2 Size">
+            <input type="text" class="form-control" name="cost_comp2_size" placeholder="Cost Comparable 2 Size">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp2_price_per_square" placeholder="Comparable Sale 2 Price per sq ft">
+            <input type="text" class="form-control" name="cost_comp2_price_per_square" placeholder="Cost Comparable 2 Price per sq ft">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp3_parcel" placeholder="Comparable Sale 3 Parcel #">
+            <input type="text" class="form-control" name="cost_comp3_parcel" placeholder="Cost Comparable 3 Parcel #">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp3_sale_price" placeholder="Comparable Sale 3 Sale Price">
+            <input type="text" class="form-control" name="cost_comp3_sale_price" placeholder="Cost Comparable Sale 3 Price">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp3_size" placeholder="Comparable Sale 3 Size">
+            <input type="text" class="form-control" name="cost_comp3_size" placeholder="Cost Comparable 3 Size">
           </div>
           <div class="form-group zclass">
-            <input type="text" class="form-control" name="cost_comp3_price_per_square" placeholder="Comparable Sale 3 Price per sq ft">
+            <input type="text" class="form-control" name="cost_comp3_price_per_square" placeholder="Cost Comparable 3 Price per sq ft">
           </div>
-          <button class="btn btn-primary btn-block">
+          <div class="form-group MATclass">
+            <input type="text" class="form-control" name="BB_JV" placeholder="Before Board Just Value">
+          </div>
+          <div class="form-group MATclass">
+            <input type="text" class="form-control" name="BB_AV" placeholder="Before Board Assessed Value">
+          </div>
+          <div class="form-group MATclass">
+            <input type="text" class="form-control" name="BB_EV" placeholder="Before Board Exemption Value">
+          </div>
+          <div class="form-group MATclass">
+            <input type="text" class="form-control" name="BB_TV" placeholder="Before Board Taxable Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="PACS_Zoning" placeholder="PACS Zoning">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="PUSE" placeholder="Property Use">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Just_Value" placeholder="Just Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Assessed_Value" placeholder="Assessed Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Exemption_Value" placeholder="Exemption Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Taxable_Value" placeholder="Taxable Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="PACS_Quality" placeholder="PACS Quality">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="PACS_Age" placeholder="PACS Age">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Appraisal_Method" placeholder="Appraisal Method">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Living_Area" placeholder="Living Area">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Legal_Acreage" placeholder="Legal Acreage">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Imprv_Val" placeholder="Improvement Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Misc_Val" placeholder="Miscellaneous Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Land_Val" placeholder="Land Value">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_Name" placeholder="Owner Mail Name">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_Addr1" placeholder="Owner Mail Address 1">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_Addr2" placeholder="Owner Mail Address 2">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_Addr3" placeholder="Owner Mail Address 3">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_City" placeholder="Owner Mail City">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_State" placeholder="Owner Mail State">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_Zip" placeholder="Owner Mail Zip">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Owner_Mail_Country" placeholder="Owner Mail Country">
+          </div>
+          <div class="form-group PACSclass">
+            <input type="text" class="form-control" name="Cover_Name" placeholder="Cover Name">
+          </div>
+          <button class="btn btn-primary btn-block" style="margin-bottom:5px;">
             Save
           </button>
         </form>
       </div>
     </div>
-    <div style="overflow: auto;" class="col-md-8">
+    <div style="overflow: auto; padding-top: 15px; margin-top: 10px;" class="col-md-9 border rounded">
       <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
           <tr>
@@ -189,18 +271,18 @@
             <td class="zclass">Estimated Land Value</td>
             <td class="zclass">Total Cost Approach</td>
             <td class="zclass">Property Appraiser Market Value</td>
-            <td class="zclass">Comparable Sale 1 Parcel #</td>
-            <td class="zclass">Comparable Sale 1 Sale Price</td>
-            <td class="zclass">Comparable Sale 1 Size</td>
-            <td class="zclass">Comparable Sale 1 Price per sq ft</td>
-            <td class="zclass">Comparable Sale 2 Parcel #</td>
-            <td class="zclass">Comparable Sale 2 Sale Price</td>
-            <td class="zclass">Comparable Sale 2 Size</td>
-            <td class="zclass">Comparable Sale 2 Price per sq ft</td>
-            <td class="zclass">Comparable Sale 3 Parcel #</td>
-            <td class="zclass">Comparable Sale 3 Sale Price</td>
-            <td class="zclass">Comparable Sale 3 Size</td>
-            <td class="zclass">Comparable Sale 3 Price per sq ft</td>
+            <td class="zclass">Cost Comparable 1 Parcel #</td>
+            <td class="zclass">Cost Comparable 1 Sale Price</td>
+            <td class="zclass">Cost Comparable 1 Size</td>
+            <td class="zclass">Cost Comparable 1 Price per sq ft</td>
+            <td class="zclass">Cost Comparable 2 Parcel #</td>
+            <td class="zclass">Cost Comparable 2 Sale Price</td>
+            <td class="zclass">Cost Comparable 2 Size</td>
+            <td class="zclass">Cost Comparable 2 Price per sq ft</td>
+            <td class="zclass">Cost Comparable 3 Parcel #</td>
+            <td class="zclass">Cost Comparable 3 Sale Price</td>
+            <td class="zclass">Cost Comparable 3 Size</td>
+            <td class="zclass">Cost Comparable 3 Price per sq ft</td>
             <td class="aclass">Potential Gross Income</td>
             <td class="aclass">Less Vacancies and Collections</td>
             <td class="aclass">Effective Gross Income</td>
@@ -210,6 +292,33 @@
             <td class="aclass">Plus Effective Tax Rate</td>
             <td class="aclass">Overall Rate</td>
             <td class="aclass">Estimated Market Value</td>
+            <td class="MATclass">BB_JV</td>
+            <td class="MATclass">BB_AV</td>
+            <td class="MATclass">BB_EV</td>
+            <td class="MATclass">BB_TV</td>
+            <td class="PACSclass">PACS_Zoning</td>
+            <td class="PACSclass">PUSE</td>
+            <td class="PACSclass">Just_Value</td>
+            <td class="PACSclass">Assessed_Value</td>
+            <td class="PACSclass">Exemption_Value</td>
+            <td class="PACSclass">Taxable_Value</td>
+            <td class="PACSclass">PACS_Quality</td>
+            <td class="PACSclass">PACS_Age</td>
+            <td class="PACSclass">Appraisal_Method</td>
+            <td class="PACSclass">Living_Area</td>
+            <td class="PACSclass">Legal_Acreage</td>
+            <td class="PACSclass">Imprv_Val</td>
+            <td class="PACSclass">Misc_Val</td>
+            <td class="PACSclass">Land_Val</td>
+            <td class="PACSclass">Owner_Mail_Name</td>
+            <td class="PACSclass">Owner_Mail_Addr1</td>
+            <td class="PACSclass">Owner_Mail_Addr2</td>
+            <td class="PACSclass">Owner_Mail_Addr3</td>
+            <td class="PACSclass">Owner_Mail_City</td>
+            <td class="PACSclass">Owner_Mail_State</td>
+            <td class="PACSclass">Owner_Mail_Zip</td>
+            <td class="PACSclass">Owner_Mail_Country</td>
+            <td class="PACSclass">Cover_Name</td>
             <td>Action</td>
           </tr>
         </thead>
@@ -250,7 +359,7 @@
             <td class="zclass">{{data.cost_comp3_size}}</td>
             <td class="zclass">{{data.cost_comp3_price_per_square}}</td>
             <td class="aclass">{{data.potentialGrossIncome}}</td>
-            <td class="aclass">{{data.lessVacanciesandCollections}}</td>
+            <td class="aclass">{{data.lessVacanciesAndCollections}}</td>
             <td class="aclass">{{data.effectiveGrossIncome}}</td>
             <td class="aclass">{{data.lessOperatingExpenses}}</td>
             <td class="aclass">{{data.netOperatingIncome}}</td>
@@ -258,6 +367,33 @@
             <td class="aclass">{{data.plusEffectiveTaxRate}}</td>
             <td class="aclass">{{data.overallRate}}</td>
             <td class="aclass">{{data.estimatedMarketVal}}</td>
+            <td class="MATclass">{{data.BB_JV}}</td>
+            <td class="MATclass">{{data.BB_AV}}</td>
+            <td class="MATclass">{{data.BB_EV}}</td>
+            <td class="MATclass">{{data.BB_TV}}</td>
+            <td class="PACSclass">{{data.PACS_Zoning}}</td>
+            <td class="PACSclass">{{data.PUSE}}</td>
+            <td class="PACSclass">{{data.Just_Value}}</td>
+            <td class="PACSclass">{{data.Assessed_Value}}</td>
+            <td class="PACSclass">{{data.Exemption_Value}}</td>
+            <td class="PACSclass">{{data.Taxable_Value}}</td>
+            <td class="PACSclass">{{data.PACS_Quality}}</td>
+            <td class="PACSclass">{{data.PACS_Age}}</td>
+            <td class="PACSclass">{{data.Appraisal_Method}}</td>
+            <td class="PACSclass">{{data.Living_Area}}</td>
+            <td class="PACSclass">{{data.Legal_Acreage}}</td>
+            <td class="PACSclass">{{data.Imprv_Val}}</td>
+            <td class="PACSclass">{{data.Misc_Val}}</td>
+            <td class="PACSclass">{{data.Land_Val}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_Name}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_Addr1}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_Addr2}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_Addr3}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_City}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_State}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_Zip}}</td>
+            <td class="PACSclass">{{data.Owner_Mail_Country}}</td>
+            <td class="PACSclass">{{data.Cover_Name}}</td>
             <td width="130">
               <a href="/edit/{{data.id}}" class="btn btn-secondary btn-sm">edit</a>
               <a href="/delete/{{data.id}}" class="btn btn-danger btn-delete btn-sm">delete</a>
